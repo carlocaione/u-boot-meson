@@ -640,6 +640,11 @@ config ARCH_SOCFPGA
 	select DM_SPI_FLASH
 	select DM_SPI
 
+config ARCH_MESON
+	bool "Amlogic Meson SoCs"
+	select CPU_V7
+	select SUPPORT_SPL
+
 config ARCH_SUNXI
 	bool "Support sunxi (Allwinner) SoCs"
 	select CMD_USB
@@ -963,6 +968,7 @@ source "board/st-ericsson/u8500/Kconfig"
 source "board/st/stm32f429-discovery/Kconfig"
 source "board/st/stv0991/Kconfig"
 source "board/sunxi/Kconfig"
+source "board/meson/Kconfig"
 source "board/syteco/zmx25/Kconfig"
 source "board/tbs/tbs2910/Kconfig"
 source "board/ti/am335x/Kconfig"
